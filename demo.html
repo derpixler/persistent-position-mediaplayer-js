@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- META -->
+	<title>Remember current pos. Audioplayer</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta name="description" content="" />
+
+	<script type="text/javascript" src="persist-min.js"></script>
+
+</head>
+<body>
+
+	<audio id="media-audio" controls="true">
+	    <source src="http://cdn.podseed.org/webschale/wp-sofa/wp-sofa-01.mp3" type="audio/mp3">
+	    <source src="http://cdn.podseed.org/webschale/wp-sofa/wp-sofa-01.ogg" type="audio/ogg">
+	    <source src="http://cdn.podseed.org/webschale/wp-sofa/wp-sofa-01.acc" type="audio/mp4">
+	    <!-- If no support at all. -->
+	    HTML5 audio not supported
+	</audio>
+
+	<div id='media-controls'>
+		<progress id='progress-bar' min='0' max='100' value='0' onclick="togglePos();">0% played</progress>
+		<button id='replay-button' class='replay' title='replay' onclick='replayMedia();'>Replay</button>
+		<button id='play-pause-button' class='play' title='play' onclick='togglePlayPause();'>Play</button>
+	</div>
+
+	<script type="text/javascript" src="persitent-position-mediaplayer.js"></script>
+
+
+
+</body>
+</html>
